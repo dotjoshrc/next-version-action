@@ -8,7 +8,7 @@ A simple GitHub action to generate a next version via semantic versioning.
 steps:
   - name: Next Version
     id: version
-    uses: technicallyjosh/next-version-action@v1
+    uses: dotjoshrc/next-version-action@v3
     with:
       version: v1.0.0
   - name: Do Something

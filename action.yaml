@@ -1,6 +1,6 @@
 name: 'Next Version Action'
 description: 'Get next version using semver'
-author: technicallyjosh
+author: dotjoshrc
 inputs:
   version:
     description: |
@@ -25,5 +25,5 @@ outputs:
       The next version as a number only. This omits any prefixes or suffixes of
       the inputted string.
 runs:
-  using: node20
+  using: node24
   main: 'dist/index.js'
