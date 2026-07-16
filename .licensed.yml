@@ -1,0 +1,26 @@
+name: next-version-action
+
+# This action is bundled into dist/ with rollup, so only production
+# dependencies are shipped. Ignore devDependencies.
+apps:
+  - source_path: .
+    sources:
+      npm: true
+    allowed:
+      - apache-2.0
+      - bsd-2-clause
+      - bsd-3-clause
+      - isc
+      - mit
+      - cc0-1.0
+      - unlicense
+    ignored:
+      npm:
+        # Platform-specific rollup build binary (optionalDependency, only
+        # installed on linux-x64). Not shipped in dist/, varies by platform.
+        - "@rollup/rollup-linux-x64-gnu"
+    reviewed:
+      npm:
+        # MIT, but the LICENSE file has a GitHub preamble before "MIT License"
+        # so the detector reports "other". Manually confirmed MIT.
+        - "@actions/http-client"
