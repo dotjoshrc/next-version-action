@@ -1,6 +1,6 @@
 {
   "name": "next-version-action",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "description": "Get the next version with semantic versioning as a GitHub action",
   "type": "module",
